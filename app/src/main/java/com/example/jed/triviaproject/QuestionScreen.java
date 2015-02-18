@@ -14,7 +14,6 @@ public class QuestionScreen extends ActionBarActivity {
         setContentView(R.layout.activity_question_screen);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
