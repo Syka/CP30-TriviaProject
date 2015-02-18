@@ -28,14 +28,21 @@
         android:layout_height="300dp"
         android:text="Start"
         android:id="@+id/button"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
         android:textSize="100dp"
         android:background="#00ffffff"
         android:scaleType="fitXY"
         android:src="@drawable/startbutton"
         android:onClick="StartButtonOnClickListener"
-        />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:text="HighScore&apos;s"
+        android:id="@+id/highScoreButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignStart="@+id/button"/>
 
 </RelativeLayout>
