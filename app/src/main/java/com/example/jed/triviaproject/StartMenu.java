@@ -14,6 +14,7 @@ public class StartMenu extends ActionBarActivity {
         setContentView(R.layout.activity_start_menu);
        // StartMenuUIDriver Start = new StartMenuUIDriver(this);
        //Start.buildUI();
+
     }
 
 /*
