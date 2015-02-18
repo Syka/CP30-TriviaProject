@@ -34,6 +34,14 @@
             android:name=".ResultScreen"
             android:label="@string/title_activity_result_screen" >
         </activity>
+        <activity
+            android:name=".HighScoreScreen"
+            android:label="@string/title_activity_high_score_screen"
+            android:parentActivityName=".StartMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jed.triviaproject.StartMenu" />
+        </activity>
     </application>
 
 </manifest>

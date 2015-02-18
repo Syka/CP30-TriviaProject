@@ -8,5 +8,6 @@
     <string name="title_activity_category_menu">CategoryMenu</string>
     <string name="title_activity_question_screen">QuestionScreen</string>
     <string name="title_activity_result_screen">ResultScreen</string>
+    <string name="title_activity_high_score_screen">HighScoreScreen</string>
 
 </resources>
