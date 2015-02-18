@@ -7,7 +7,7 @@
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/razer_logo"
+        android:src="@drawable/splashscreen"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/textView"
         android:background="#ffffffff"/>

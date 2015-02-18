@@ -32,8 +32,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="130dp"
         android:textSize="100dp"
-        android:src="@drawable/startbutton"
         android:background="#00ffffff"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/startbutton"
+        />
 
 </RelativeLayout>
