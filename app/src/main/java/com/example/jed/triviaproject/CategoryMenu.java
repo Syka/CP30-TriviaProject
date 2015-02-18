@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
 public class CategoryMenu extends ActionBarActivity {
 
     @Override
@@ -13,7 +12,6 @@ public class CategoryMenu extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_menu);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -36,6 +34,4 @@ public class CategoryMenu extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }

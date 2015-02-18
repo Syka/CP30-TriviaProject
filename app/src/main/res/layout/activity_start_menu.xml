@@ -35,6 +35,7 @@
         android:background="#00ffffff"
         android:scaleType="fitXY"
         android:src="@drawable/startbutton"
+        android:onClick="StartButtonOnClickListener"
         />
 
 </RelativeLayout>

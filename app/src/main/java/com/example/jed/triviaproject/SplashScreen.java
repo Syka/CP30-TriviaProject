@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-
 public class SplashScreen extends Activity {
 
     private static int SPLASH_TIME_OUT = 3000;
@@ -34,5 +33,4 @@ public class SplashScreen extends Activity {
             }
         }, SPLASH_TIME_OUT);
     }
-
 }
