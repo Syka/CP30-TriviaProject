@@ -18,11 +18,13 @@ public class StartMenu extends ActionBarActivity {
 
        // StartMenuUIDriver Start = new StartMenuUIDriver(this);
        //Start.buildUI();
-
     }
     public void StartButtonOnClickListener(View v) {
-        Intent i = new Intent(this, CategoryMenu.class);
+        Intent i = new Intent(this, QuestionScreen.class);
         this.startActivity(i);
+    }
+    public void HighScoreButtonOnClickListener(View v) {
+        Intent i = new Intent(this, HighScoreScreen.class);
     }
 /*
     @Override
@@ -46,6 +48,5 @@ public class StartMenu extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     */
 }
