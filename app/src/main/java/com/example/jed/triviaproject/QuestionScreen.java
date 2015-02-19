@@ -23,6 +23,7 @@ public class QuestionScreen extends ActionBarActivity {
         setContentView(R.layout.activity_question_screen);
         createTrivia();
         setScreen();
+
     }
 
     public void createTrivia() {
