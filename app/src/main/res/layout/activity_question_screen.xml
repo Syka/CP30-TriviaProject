@@ -6,7 +6,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 tools:context="com.example.jed.triviaproject.QuestionScreen"
                 android:id="@+id/kdf"
-                android:background="@drawable/backgroundquestion">
+                android:background="@drawable/question">
 
     <TextView
         android:layout_width="fill_parent"
