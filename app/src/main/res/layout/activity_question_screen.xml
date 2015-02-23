@@ -31,62 +31,65 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="53dp"
         android:layout_marginLeft="7dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical|center_horizontal"/>
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="90dp"
+        android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA1"
         android:textSize="15dp"
         android:onClick="TriviaOnClickListener"
         android:layout_below="@+id/txtQuestion"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="34dp"
         android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:layout_alignParentEnd="true"/>
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="90dp"
+        android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA2"
         android:textSize="15dp"
         android:onClick="TriviaOnClickListener"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/btnA1"
         android:enabled="true"
         android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
-        android:clickable="true" />
+        android:clickable="true"
+        android:layout_below="@+id/btnA1"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btnA3"/>
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA3"
         android:textSize="15dp"
         android:onClick="TriviaOnClickListener"
-        android:layout_below="@+id/btnA1"
-        android:layout_alignParentStart="true"
         android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:layout_below="@+id/btnA2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA4"
         android:textSize="15dp"
         android:onClick="TriviaOnClickListener"
-        android:layout_alignBottom="@+id/btnA3"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/btnA2"
         android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:layout_below="@+id/btnA3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
 
     <TextView
         android:layout_width="90dp"
