@@ -3,6 +3,7 @@ package com.example.jed.triviaproject;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,10 +11,14 @@ import android.widget.TextView;
 
 public class ResultScreen extends ActionBarActivity {
     TextView TotalView, RatioView, ScoreView;
-    int totalTime, right, wrong;
+    double right, totalTime;
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+        Intent i = new Intent(this, StartMenu.class);
+        startActivity(i);
+        finish();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,19 +30,16 @@ public class ResultScreen extends ActionBarActivity {
     }
     protected void getScore() {
         Intent i = getIntent();
-        totalTime = i.getExtras().getInt("totalTime");
-        right = i.getExtras().getInt("right");
-        wrong = i.getExtras().getInt("wrong");
+        totalTime = (double) i.getExtras().getInt("totalTime");
+        right = (double) i.getExtras().getInt("right");
 
         TotalView.setText(Integer.toString(i.getExtras().getInt("totalTime")));
-        RatioView.setText(getRatio(right, wrong));
-        ScoreView.setText(getScore(totalTime, Integer.parseInt(getRatio(right, wrong))));
+        RatioView.setText(String.format("%1$s/%2$s", i.getExtras().getInt("right"),
+                i.getExtras().getInt("size")));
+        ScoreView.setText(Double.toString(scoreCalc()));
     }
-    protected String getRatio(int r, int w) {
-        return Integer.toString(r / w);
-    }
-    protected String getScore(int tt, int r) {
-        return Integer.toString(Math.round((tt * r) * 100));
+    public double scoreCalc() {
+        return right / totalTime * 1000;
     }
     public void PlayAgainOnClickListener(View v) {
         Intent i = new Intent(this, QuestionScreen.class);
