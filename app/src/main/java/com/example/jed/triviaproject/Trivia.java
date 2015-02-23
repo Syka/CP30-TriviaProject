@@ -21,7 +21,6 @@ public class Trivia {
         answers[2] = a3;
         answers[3] = _ca;
     }
-
     public String getProperty() {
         return category + "\n" + property;
     }
