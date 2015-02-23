@@ -5,11 +5,11 @@ package com.example.jed.triviaproject;
  */
 
 public class Trivia {
-    private String category, property, question, _ca;
+    private String category, property, question, _ca; //correct answer
     private String[] answers;
 
-    public Trivia(String c, String p,
-                  String q, String a1, String a2, String a3, String ca) {
+    public Trivia(String c, String p, String q,
+                  String a1, String a2, String a3, String ca) {
         category = c;
         property = p;
         question = q;

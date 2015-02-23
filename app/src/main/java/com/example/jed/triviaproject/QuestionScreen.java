@@ -33,12 +33,13 @@ public class QuestionScreen extends ActionBarActivity {
     }
     //creates Handler that controls the timer
     //in its own thread
-    protected synchronized void setTimeThread() {
+    protected void setTimeThread() {
         timeThread = new Handler();
         timeThread.postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (time <= 0) {
+                    setTimer(0);
                     //sends game stats to results screen via intent
                     Intent i = new Intent(getQA(), ResultScreen.class);
                     i.putExtra("totalTime", totalTime);
@@ -47,7 +48,8 @@ public class QuestionScreen extends ActionBarActivity {
                     getQA().startActivity(i);
                 } else {
                     //continues timer while the game is running
-                    time--; totalTime++;
+                    time--;
+                    totalTime++;
                     txtTimer.setText(Integer.toString(time));
                     new Handler().postDelayed(this, 1000);
                 }
@@ -56,11 +58,11 @@ public class QuestionScreen extends ActionBarActivity {
     }
     //posts instant changes to the
     //timer through its Handler
-    protected void setTimer(int t) {
+    protected void setTimer(final int t) {
         timeThread.post(new Runnable() {
             @Override
             public void run() {
-                txtTimer.setText(Integer.toString(time++));
+                txtTimer.setText(Integer.toString(t));
             }
         });
     }
@@ -126,11 +128,11 @@ public class QuestionScreen extends ActionBarActivity {
         b4.setText(trivia.get(t).getAnswers(Integer.parseInt(nums.get(3).toString())));
     }
     //adjusts time limit and score accordingly on button press
-    public synchronized void TriviaOnClickListener(View v) {
+    public void TriviaOnClickListener(View v) {
         Button btn = (Button) v;
         if (btn.getText().equals(trivia.get(triv).getCA_4())) {
             right++;
-            setTimer(time++);
+            setTimer(time += 5);
         } else {
             wrong++;
             setTimer(time -= 2);
