@@ -17,7 +17,7 @@
         android:onClick="StartButtonOnClickListener"
         android:layout_above="@+id/highScoreButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="51dp" />
 
     <Button
         android:layout_width="match_parent"
@@ -27,6 +27,26 @@
         android:onClick="HighScoreButtonOnClickListener"
         android:enabled="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:background="#ff3e3eff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="59"
+        android:id="@+id/textView2"
+        android:textSize="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Seconds"
+        android:id="@+id/textView4"
+        android:textSize="35dp"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
