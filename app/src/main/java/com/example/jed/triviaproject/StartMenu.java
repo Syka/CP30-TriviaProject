@@ -8,16 +8,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-
 public class StartMenu extends ActionBarActivity {
-
+    @Override
+    public void onBackPressed() {
+        System.exit(0);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_menu);
-
-       // StartMenuUIDriver Start = new StartMenuUIDriver(this);
-       //Start.buildUI();
     }
     public void StartButtonOnClickListener(View v) {
         Intent i = new Intent(this, QuestionScreen.class);

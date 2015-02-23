@@ -74,7 +74,8 @@
         android:id="@+id/button10"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:onClick="PlayAgainOnClickListener" />
 
     <TextView
         android:layout_width="210dp"
