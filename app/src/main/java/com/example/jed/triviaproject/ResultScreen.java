@@ -14,11 +14,7 @@ public class ResultScreen extends ActionBarActivity {
     double right, totalTime;
 
     @Override
-    public void onBackPressed() {
-        Intent i = new Intent(this, StartMenu.class);
-        startActivity(i);
-        finish();
-    }
+    public void onBackPressed() {}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +38,6 @@ public class ResultScreen extends ActionBarActivity {
         return right / totalTime * 1000;
     }
     public void PlayAgainOnClickListener(View v) {
-        Intent i = new Intent(this, QuestionScreen.class);
-        this.startActivity(i);
+        this.startActivity(new Intent(this, StartMenu.class));
     }
 }

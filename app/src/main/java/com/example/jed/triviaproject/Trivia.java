@@ -5,7 +5,8 @@ package com.example.jed.triviaproject;
  */
 
 public class Trivia {
-    private String category, property, question, _ca; //correct answer
+    private String category, property, question,
+            _a1, _a2, _a3, _ca; //correct answer
     private String[] answers;
 
     public Trivia(String c, String p, String q,
@@ -13,12 +14,15 @@ public class Trivia {
         category = c;
         property = p;
         question = q;
+        _a1 = a1;
+        _a2 = a2;
+        _a3 = a3;
         _ca = ca;
 
         answers = new String[4];
-        answers[0] = a1;
-        answers[1] = a2;
-        answers[2] = a3;
+        answers[0] = _a1;
+        answers[1] = _a2;
+        answers[2] = _a3;
         answers[3] = _ca;
     }
     public String getProperty() {

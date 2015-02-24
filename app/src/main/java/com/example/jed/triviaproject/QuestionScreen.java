@@ -1,6 +1,7 @@
 package com.example.jed.triviaproject;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -86,7 +88,7 @@ public class QuestionScreen extends ActionBarActivity {
     protected void setTriv() {
         ArrayList<Integer> nums = new ArrayList<>();
         Random r = new Random();
-        int triv = r.nextInt(td.getSize());
+        triv = r.nextInt(td.getSize());
 
         //ensures the four answers are
         //never duplicated
@@ -111,11 +113,18 @@ public class QuestionScreen extends ActionBarActivity {
     public void TriviaOnClickListener(View v) {
         Button btn = (Button) v;
         if (btn.getText().equals(td.getTrivia(triv).getCA_4())) {
+            makeToast("Correct!");
             right++;
             setTimer(time += 5);
-        } else setTimer(time -= 2);
+        } else {
+            makeToast("Wrong!");
+            setTimer(time -= 2);
+        }
         //chooses another question
         setTriv();
+    }
+    public void makeToast(String str) {
+        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
     //returns question screen activity
     protected QuestionScreen getQA() {
