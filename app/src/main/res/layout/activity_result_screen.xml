@@ -18,47 +18,46 @@
         android:layout_gravity="center|left"
         android:gravity="center_vertical|center_horizontal"
         android:id="@+id/textView8"
-        android:textColor="#ff16373e"
+        android:textColor="#F0F7FF"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"/>
 
     <TextView
         android:layout_width="210dp"
         android:layout_height="75dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Time Elapsed"
         android:id="@+id/txt1"
         android:textSize="25dp"
         android:gravity="center_vertical"
         android:layout_below="@+id/textView8"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#F0F7FF" />
 
     <TextView
         android:layout_width="210dp"
         android:layout_height="75dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Right Answers"
         android:id="@+id/textView10"
         android:textSize="25dp"
         android:layout_below="@+id/txt1"
         android:layout_alignParentStart="true"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:textColor="#F0F7FF" />
 
     <TextView
         android:layout_width="130dp"
         android:layout_height="75dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="xxx s."
         android:id="@+id/txtTotalTime"
         android:layout_alignTop="@+id/txt1"
         android:layout_alignParentEnd="true"
         android:textSize="40dp"
-        android:gravity="center_vertical|center_horizontal"/>
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#F0F7FF" />
 
     <TextView
         android:layout_width="130dp"
         android:layout_height="45dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="xx/xx"
         android:id="@+id/txtRatio"
         android:textSize="40dp"
@@ -66,7 +65,8 @@
         android:layout_alignTop="@+id/textView10"
         android:layout_alignParentEnd="true"
         android:layout_alignBottom="@+id/textView10"
-        android:textIsSelectable="false" />
+        android:textIsSelectable="false"
+        android:textColor="#F0F7FF" />
 
     <Button
         android:layout_width="fill_parent"
@@ -76,29 +76,30 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textSize="30dp"
-        android:onClick="PlayAgainOnClickListener" />
+        android:onClick="PlayAgainOnClickListener"
+        android:textColor="#F0F7FF" />
 
     <TextView
         android:layout_width="210dp"
         android:layout_height="75dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Final Score"
         android:id="@+id/textView13"
         android:textSize="25dp"
         android:gravity="center_vertical"
         android:layout_above="@+id/button10"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="52dp"/>
+        android:layout_marginBottom="52dp"
+        android:textColor="#F0F7FF" />
 
     <TextView
         android:layout_width="130dp"
         android:layout_height="75dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="#"
         android:id="@+id/txtScore"
         android:textSize="40dp"
         android:gravity="center_vertical|center_horizontal"
         android:layout_alignTop="@+id/textView13"
-        android:layout_alignStart="@+id/txtRatio"/>
+        android:layout_alignStart="@+id/txtRatio"
+        android:textColor="#F0F7FF" />
 
 </RelativeLayout>

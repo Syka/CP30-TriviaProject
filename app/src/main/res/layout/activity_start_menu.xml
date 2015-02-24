@@ -15,38 +15,41 @@
         android:scaleType="fitXY"
         android:src="@drawable/startbutton"
         android:onClick="StartButtonOnClickListener"
-        android:layout_above="@+id/highScoreButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp" />
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="172dp"
+        android:layout_height="60dp"
         android:text="HighScores"
         android:id="@+id/highScoreButton"
         android:onClick="HighScoreButtonOnClickListener"
         android:enabled="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginBottom="35dp"
         android:layout_alignParentBottom="true"
-        android:background="#ff3e3eff" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="59"
         android:id="@+id/textView2"
         android:textSize="150dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#F0F7FF" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Seconds"
         android:id="@+id/textView4"
         android:textSize="35dp"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#F0F7FF" />
 
 </RelativeLayout>

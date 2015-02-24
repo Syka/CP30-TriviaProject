@@ -24,7 +24,6 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="142dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/txtQuestion"
         android:textSize="25dp"
         android:layout_below="@+id/txtCategory"
@@ -32,101 +31,76 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="7dp"
         android:layout_marginRight="5dp"
-        android:gravity="center_vertical|center_horizontal"/>
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#F0F7FF" />
 
     <Button
         android:layout_width="172dp"
         android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA1"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:onClick="TriviaOnClickListener"
         android:layout_below="@+id/txtQuestion"
         android:layout_alignParentStart="true"
-        android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
         android:clickable="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:textColor="#F0F7FF" />
 
     <Button
         android:layout_width="172dp"
         android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA2"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:onClick="TriviaOnClickListener"
         android:enabled="true"
-        android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
         android:clickable="true"
         android:layout_below="@+id/btnA1"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/btnA3"/>
+        android:layout_alignEnd="@+id/btnA3"
+        android:textColor="#F0F7FF" />
 
     <Button
         android:layout_width="172dp"
         android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA3"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:onClick="TriviaOnClickListener"
-        android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
         android:clickable="true"
         android:layout_below="@+id/btnA2"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:textColor="#F0F7FF" />
 
     <Button
         android:layout_width="172dp"
         android:layout_height="60dp"
         android:text=""
         android:id="@+id/btnA4"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:onClick="TriviaOnClickListener"
-        android:background="#d5546fdf"
         android:gravity="center_vertical|center_horizontal"
         android:clickable="true"
         android:layout_below="@+id/btnA3"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:textColor="#F0F7FF" />
 
     <TextView
         android:layout_width="90dp"
         android:layout_height="45dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="59"
         android:id="@+id/txtTimer"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="55dp"
+        android:textColor="#F0F7FF"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center_vertical|center_horizontal"
-        android:textSize="40dp"
-        android:textColor="#F0F7FF"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Time"
-        android:id="@+id/textView7"
-        android:layout_alignParentBottom="true"
-        android:layout_alignTop="@+id/txtTimer"
-        android:textColor="#F0F7FF"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/txtTimer"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Remaining"
-        android:id="@+id/textView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignTop="@+id/txtTimer"
-        android:textColor="#F0F7FF"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/txtTimer"/>
+        android:layout_below="@+id/btnA4" />
 
 </RelativeLayout>
