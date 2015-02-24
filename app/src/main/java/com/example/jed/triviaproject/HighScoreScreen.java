@@ -24,9 +24,9 @@ public class HighScoreScreen extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high_score_screen);
         Log.d("check","getting db");
-        dropSQLLite();
+        //dropSQLLite();
         createSQLLite();
-        setSQLLite();
+        //setSQLLite();
         getSQLLite();
 
 
