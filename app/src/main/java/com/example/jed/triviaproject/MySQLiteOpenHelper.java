@@ -19,7 +19,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
     private static final String DBNAME = "highscoreDB";
     private static final int DBVERSION =2;
-    private static final String TBCRT = "CREATE TABLE mytable (NAME TEXT, SCORE TEXT);";
+    private static final String TBCRT = "CREATE TABLE mytable (NAME TEXT, SCORE INTEGER);";
 
     public MySQLiteOpenHelper(Context context)
     {

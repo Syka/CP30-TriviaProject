@@ -41,7 +41,7 @@ public class ResultScreen extends ActionBarActivity {
         ScoreView.setText(Integer.toString((int) scoreCalc()));
     }
     protected double scoreCalc() {
-        return (right / totalTime) * 1000;
+        return (right *100);
     }
     public void PlayAgainOnClickListener(View v) {
         InitialScore = (EditText) findViewById(R.id.etScore);
@@ -50,7 +50,7 @@ public class ResultScreen extends ActionBarActivity {
                 SQLiteDatabase db = _sqlHelper.getWritableDatabase();
 
                 db.execSQL("INSERT INTO mytable (name,score)VALUES('" + InitialScore.getText().toString() + "','" + Integer.toString((int) scoreCalc()) + "')");
-                Log.d("check", InitialScore.getText().toString().toUpperCase() + " " + Integer.toString((int) scoreCalc()));
+                Log.d("check", InitialScore.getText().toString().toUpperCase() + " " + scoreCalc());
                 InitialScore.setEnabled(false);
 
         }

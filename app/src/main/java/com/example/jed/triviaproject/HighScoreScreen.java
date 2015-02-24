@@ -75,11 +75,11 @@ public class HighScoreScreen extends ActionBarActivity {
         SQLiteDatabase db = _sqlHelper.getWritableDatabase();
         for(int i =0; i<1; i++)
         {
-            db.execSQL("INSERT INTO mytable (name,score)VALUES('ES','8394')");
-            db.execSQL("INSERT INTO mytable (name,score)VALUES('JW','3043')");
-            db.execSQL("INSERT INTO mytable (name,score)VALUES('DM','2343')");
-            db.execSQL("INSERT INTO mytable (name,score)VALUES('TA','5734')");
-            db.execSQL("INSERT INTO mytable (name,score)VALUES('JC','6745')");
+            db.execSQL("INSERT INTO mytable (name,score)VALUES('ES',8394)");
+            db.execSQL("INSERT INTO mytable (name,score)VALUES('JW',3043)");
+            db.execSQL("INSERT INTO mytable (name,score)VALUES('DM',2343)");
+            db.execSQL("INSERT INTO mytable (name,score)VALUES('TA',5734)");
+            db.execSQL("INSERT INTO mytable (name,score)VALUES('JC',6745)");
 
         }
         }
@@ -104,7 +104,7 @@ public class HighScoreScreen extends ActionBarActivity {
     {
         try {
             SQLiteDatabase db = _sqlHelper.getWritableDatabase();
-            db.execSQL("CREATE TABLE IF NOT EXISTS mytable (NAME TEXT, SCORE TEXT);");
+            db.execSQL("CREATE TABLE IF NOT EXISTS mytable (NAME TEXT, SCORE INTEGER);");
         }
         catch(Exception e)
         {
