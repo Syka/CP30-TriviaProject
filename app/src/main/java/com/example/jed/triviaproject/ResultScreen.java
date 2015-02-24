@@ -29,13 +29,12 @@ public class ResultScreen extends ActionBarActivity {
         totalTime = (double) i.getExtras().getInt("totalTime");
         right = (double) i.getExtras().getInt("right");
 
-        TotalView.setText(Integer.toString(i.getExtras().getInt("totalTime")));
-        RatioView.setText(String.format("%1$s/%2$s", i.getExtras().getInt("right"),
-                i.getExtras().getInt("size")));
-        ScoreView.setText(Double.toString(scoreCalc()));
+        TotalView.setText(String.format("%1$s s", i.getExtras().getInt("totalTime")));
+        RatioView.setText(String.format("%1$s/%2$s", i.getExtras().getInt("right"), i.getExtras().getInt("size")));
+        ScoreView.setText(Integer.toString((int) scoreCalc()));
     }
-    public double scoreCalc() {
-        return Math.floor(right / totalTime * 1000);
+    protected double scoreCalc() {
+        return (right / totalTime) * 1000;
     }
     public void PlayAgainOnClickListener(View v) {
         this.startActivity(new Intent(this, StartMenu.class));

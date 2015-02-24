@@ -31,6 +31,6 @@ public class Trivia {
     public String getQuestion() {
         return question;
     }
-    public String getCA_4(){ return _ca; }
+    public String getCA(){ return _ca; }
     public String getAnswers(int index) { return answers[index]; }
 }

@@ -14,49 +14,45 @@ public class TriviaDriver {
         //      WRONG ANSWER 1, WRONG ANSWER 2, WRONG ANSWER 3, CORRECT ANSWER);
 
         //MOVIE TRIVIA
-
         //Star Wars
         trivia.add(new Trivia("Movies", "Star Wars",
-                "What is the probability of successfully navigating an asteroid field?",
-                "1,547:1", "1,245,677:1", "10:1", "3,720:1"));
+                "What are the odds of successfully navigating an asteroid field?",
+                "1,547 to 1", "1,245,677 to 1", "10 to 1 ", "3,720 to 1"));
         trivia.add(new Trivia("Movies", "Star Wars",
-                "The volcanic world of Mustafar in Episode 3: Revenge of the Sith was designed to look like what?",
-                "George Lucas’s Vision of the Sun.", "George Lucas’s Worst Nightmare", "Florida", "George Lucas’s Vision of Hell."));
+                "The volcanic world of Mustafar was George Lucas' rendition of what?",
+                "The sun", "His worst nightmare", "Florida", "Hell"));
 
         //Marvel
         trivia.add(new Trivia("Movies", "Marvel",
-                "What does Rocket Raccoon require to escape the prison in Guardians of the Galaxy? ",
+                "What does Rocket Raccoon require to escape the prison in \"Guardians of the Galaxy?\"",
                 "An Infinity Stone", "A keycard", "Stan Lee", "A prosthetic leg"));
         trivia.add(new Trivia("Movies", "Marvel",
-                "Of all the Avengers, which movie star appeared as a different superhero in 2005?",
-                "Scarlett Johansson", "Robert Downey Jr.", "Chris Hemsworth", "Chris Evans"));
+                "Of the Avengers, which movie star played as a different superhero?",
+                "Scarlett Johansson", "Robert Downey Jr.", "Tobey Maguire", "Chris Evans"));
 
         //Back to the Future
         trivia.add(new Trivia("Movies", "Back to the Future",
                 "How many jigawatts are needed to go back in time?",
                 "2.09", "1.25", "2.03", "1.21"));
         trivia.add(new Trivia("Movies", "Back to the Future",
-                "Make like a tree and ...?",
-                "Stay Put", "Die Old", "Travel Light", "Get Lost"));
+                "Complete the quote: \"Make like a tree and...?\"",
+                "\"...stay put!\"", "\"...die old!\"", "\"...grow leaves!\"", "\"...get lost!\""));
 
         //Lord of the Rings
         trivia.add(new Trivia("Movies", "Lord of the Rings",
-                "Other then the movies, Gollum showed up on what awards show? ",
-                "Kids Choice Awards", "Emmys", "The Oscars", "MTV Video Awards"));
+                "Gollum made a personal appearance during what awards show? ",
+                "Kids Choice Awards", "Emmy Awards", "The Oscars", "MTV Video Awards"));
         trivia.add(new Trivia("Movies", "Lord of the Rings",
-                "Whats the most valuable thing in the Lonely Mountain?",
+                "What is the most valuable item held within the Lonely Mountain?",
                 "Gollum", "The Ring", "Smaug", "Arkenstone"));
 
         //Die Hard
         trivia.add(new Trivia("Movies", "Die Hard",
                 "What do most cops do with their badge numbers?",
-                "Race cars", "Gamble the badge", "Stop Crimes", "Play the lottery"));
+                "Race cars", "Gamble", "Stop crimes", "Play the lottery"));
         trivia.add(new Trivia("Movies", "Die Hard",
-                "What is the name of Mcleans partner in Die Hard 3?",
-                "Posidon", "Hades", "Athena", "Zeus"));
-
-
-
+                "What is the name of McLean's partner in \"Die Hard 3?\"",
+                "Kratos", "Hades", "Athena", "Zeus"));
 
         //TV TRIVIA
         //The Simpsons
@@ -64,74 +60,76 @@ public class TriviaDriver {
                 "Who shot Mr. Burns?",
                 "Bumblebee Man", "Hank Scorpio", "Apu", "Maggie"));
         trivia.add(new Trivia("Television", "The Simpsons",
-                "NANANANANANANANANA...?",
-                "Batman", "Homer", "I forgot", "Leader"));
+                "Which Japanese laundry detergent's logo resembles Homer's likeness?",
+                "Mr. Clean", "Mr. Dazzle", "Mr. Twinkle", "Mr. Sparkle"));
 
         //Family Guy
         trivia.add(new Trivia("Television", "Family Guy",
                 "What car does God Himself drive?",
-                "A PT Cruiser", "The Popemobile", "A Camero", "An Escalade"));
+                "PT Cruiser", "The Popemobile", "Camero", "Escalade"));
         trivia.add(new Trivia("Television", "Family Guy",
-                "On the 100th episode of Family Guy, what did Stewie accomplish?",
-                "Resurrection of Brian", "Become President", "Time Travel", "Killing Lois"));
+                "On the 100th episode, what does Stewie finally accomplish?",
+                "Resurrect Brian", "Become President", "Time travel to the future", "Kill Lois"));
 
         //Futurama
         trivia.add(new Trivia("Television", "Futurama",
-                "I am the man with NO name...?",
+                "Who is the man with \"no name?\"",
                 "Bender", "Phillip J. Fry", "Kip Kroker", "Zap Brannigan"));
         trivia.add(new Trivia("Television", "Futurama",
-                "What makes a Man turn neutral, Power?",
-                "Endless Food", " Lust for Woman", "Neutrality", "Lust of Gold"));
+                "What show does the phrase, \"What makes a Man turn neutral, Power?\" come from?",
+                "Endless Food", " Lust for Women", "Neutrality", "Lust of Gold"));
 
         //How I met your Mother
         trivia.add(new Trivia("Television", "How I met your Mother",
-                "WHat name is most associated to the statement: Have you met ...?",
+                "The phrase, \"Have you met...\" usually refers to which character?",
                 "Mother", "Marshal", "Barney", "Ted"));
         trivia.add(new Trivia("Television", "How I met your Mother",
-                "What does the gang call out when their wearing Top Hats?",
-                "Over-Thinker", "Fancy", "Captain", "The Gentlemen"));
+                "What do The Gang call themselves while wearing top hats?",
+                "Old Timey", "Guv'nors", "Moneybags", "The Gentlemen"));
 
         //VIDEO GAME TRIVIA
         //Ratchet and Clank
         trivia.add(new Trivia("Video Games", "Ratchet & Clank",
-                "Over the course of the series, Captain Qwark eventually goes form Hero to what?",
+                "Over the course of the series, Captain Qwark eventually goes from Hero to what?",
                 "Zero", "Salesman", "Homeless", "Galactic Mayor"));
         trivia.add(new Trivia("Video Games", "Ratchet & Clank",
-                "What villian was responsible for the destruction of the Lombax extinction?",
-                "Gleeman Vox", "Stuart Zurgo", "Dr. Nufarious", "Percival Tachyon"));
+                "What common household hardware are used as the series' currency?",
+                "Wingnuts", "Washers", "Screws", "Bolts"));
 
         //Mario World
         trivia.add(new Trivia("Video Games", "Mario",
                 "What were the original Yoshi colours in Yoshi's Story?",
-                "Green, Yellow, Blue & Pink", "Just Red & Green", "Green, White, Blue & Red", "Green, Yellow, Blue & Red"));
+                "Green, Orange, Blue, Pink", "Just Red & Green", "Green, White, Blue, Red", "Green, Yellow, Blue, Red"));
         trivia.add(new Trivia("Video Games", "Mario",
-                "Before Mario was Mario, what was his name?",
-                "Luigi", "Rockman", "Plungerman", "Jumpman"));
+                "What was Mario's original name?",
+                "Luigi", "Rockman", "Shigeru", "Jumpman"));
+        trivia.add(new Trivia("Video Games", "Mario",
+                "Complete the phrase, \"You know what they say: All toasters...\"",
+                "\"...toast bread!\"", "\"...toast bagels!\"", "\"...burn my toast!\"", "\"...toast toast!\""));
 
         //Far Cry
         trivia.add(new Trivia("Video Games", "Far Cry",
-                "In Far Cry 4, Which animal was not included?",
-                "Bear", "Honey Badger", "Eagle", "Falcon"));
+                "In \"Far Cry 4,\" which animal was not hunted for sport?",
+                "Bears", "Honey Badgers", "Eagles", "Dogs"));
         trivia.add(new Trivia("Video Games", "Far Cry",
-                "In Far Cry 2, the player is under what sickness?",
-                "Cancer", "AIDS", "Headaches", "Miliaria"));
+                "The player contracts what sickness in \"Far Cry 2\"?",
+                "Hepatitis C", "AIDS", "Traveller's Diarrhea", "Malaria"));
 
         //Pokemon
         trivia.add(new Trivia("Video Games", "Pokemon",
-                "To the end of Generation 6, how many Pokemon are there?",
+                "How many Pokemon are there to catch by Generation 6?",
                 "674", "742", "698", "719"));
         trivia.add(new Trivia("Video Games", "Pokemon",
-                "How many evolutions does Eevee have?",
-                "6", "7", "9", "8"));
+                "How many possible evolutions does Eevee have?",
+                "Six", "Seven", "Nine", "Eight"));
 
         //Assassins Creed
-        trivia.add(new Trivia("Video Games", "Assassins Creed",
-                "What Assassin turned against there own brotherhood to save lives?",
-                "Altir", "Arno", "Edward", "Shay"));
-        trivia.add(new Trivia("Video Games", "Assassins Creed",
-                "What Assassin died locking himself inside a Library?",
-                "Aveline", "Ezio", "Connor", "Altir"));
-
+        trivia.add(new Trivia("Video Games", "Assassin's Creed",
+                "Who was the first Assassin to work for the Templars?",
+                "Altair Ibn-La'Ahad", "Desmond Miles", "Edward Kenway", "Shay Cormac"));
+        trivia.add(new Trivia("Video Games", "Assassin's Creed",
+                "Which of the following was not a featured setting in the series?",
+                "Jerusalem", "The Caribbean", "Italy", "Chicago"));
     }
     public ArrayList<Trivia> arr() {
         return trivia;

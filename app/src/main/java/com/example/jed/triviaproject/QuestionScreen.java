@@ -15,11 +15,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class QuestionScreen extends ActionBarActivity {
-    Handler timeThread;
-    TriviaDriver td;
-    Button b1, b2, b3, b4;
-    TextView cat, question, txtTimer;
-    int triv, right = 0, time = 59, totalTime = 0;
+    public Handler timeThread;
+    public TriviaDriver td;
+    public Button b1, b2, b3, b4;
+    public TextView cat, question, txtTimer;
+    public int triv, right, time, totalTime, size;
+    public boolean noQuestions;
 
     @Override
     public void onBackPressed() {}
@@ -30,8 +31,16 @@ public class QuestionScreen extends ActionBarActivity {
         txtTimer = (TextView) findViewById(R.id.txtTimer);
 
         td = new TriviaDriver();
+        setVars();
         setScreen();
         setTimeThread();
+    }
+    protected void setVars() {
+        right = 0;
+        time = 59;
+        totalTime = 0;
+        size = td.arr().size();
+        noQuestions = false;
     }
     //creates Handler that controls the timer
     //in its own thread
@@ -40,14 +49,15 @@ public class QuestionScreen extends ActionBarActivity {
         timeThread.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (time <= 0) {
+                if (time <= 0 || noQuestions) {
                     stopThread();
+                    timeThread.removeCallbacks(this);
                 } else {
                     //continues timer while the game is running
                     time--;
                     totalTime++;
                     txtTimer.setText(Integer.toString(time));
-                    new Handler().postDelayed(this, 1000);
+                    timeThread.postDelayed(this, 1000);
                 }
             }
         }, 1000);
@@ -68,7 +78,7 @@ public class QuestionScreen extends ActionBarActivity {
             public void run() {
                 //sends game stats to results screen via intent
                 getQA().startActivity(resultIntent());
-                finish();
+                Thread.dumpStack();
             }
         });
     }
@@ -76,7 +86,8 @@ public class QuestionScreen extends ActionBarActivity {
         Intent i = new Intent(getQA(), ResultScreen.class);
         i.putExtra("totalTime", totalTime);
         i.putExtra("right", right);
-        i.putExtra("size", td.arr().size());
+        Log.d("test", String.format("ArrayList size is: %1$s", td.arr().size()));
+        i.putExtra("size", size);
         return i;
     }
     //creates variables of game screen's UI elements
@@ -122,8 +133,7 @@ public class QuestionScreen extends ActionBarActivity {
         Button btn = (Button) v;
         if (td.arr().size() == 1) {
             checkAnswer(btn);
-            setTimer(0);
-            stopThread();
+            noQuestions = true;
         } else {
             checkAnswer(btn);
             td.arr().remove(triv);
@@ -131,13 +141,13 @@ public class QuestionScreen extends ActionBarActivity {
         //chooses another question
         setTriv();
     }
-    public void checkAnswer(Button b) {
-        if (b.getText().equals(td.arr().get(triv).getCA_4())) {
+    public synchronized void checkAnswer(Button b) {
+        if (b.getText().equals(td.arr().get(triv).getCA())) {
             makeToast("Correct!");
             right++;
             setTimer(time += 3);
         } else {
-            makeToast("Wrong!");
+            makeToast(String.format("The correct answer was: %1$s", td.arr().get(triv).getCA()));
             setTimer(time -= 2);
         }
     }
