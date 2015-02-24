@@ -36,7 +36,7 @@
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="60dp"
+        android:layout_height="47dp"
         android:text=""
         android:id="@+id/btnA1"
         android:textSize="20dp"
@@ -50,7 +50,7 @@
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="60dp"
+        android:layout_height="47dp"
         android:text=""
         android:id="@+id/btnA2"
         android:textSize="20dp"
@@ -65,7 +65,7 @@
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="60dp"
+        android:layout_height="47dp"
         android:text=""
         android:id="@+id/btnA3"
         android:textSize="20dp"
@@ -79,7 +79,7 @@
 
     <Button
         android:layout_width="172dp"
-        android:layout_height="60dp"
+        android:layout_height="47dp"
         android:text=""
         android:id="@+id/btnA4"
         android:textSize="20dp"
@@ -93,14 +93,13 @@
 
     <TextView
         android:layout_width="90dp"
-        android:layout_height="45dp"
+        android:layout_height="60dp"
         android:text="59"
         android:id="@+id/txtTimer"
         android:gravity="center_vertical|center_horizontal"
         android:textSize="55dp"
         android:textColor="#F0F7FF"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnA4" />
+        android:layout_below="@+id/btnA4"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
