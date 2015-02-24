@@ -56,7 +56,7 @@ public class ResultScreen extends ActionBarActivity {
             SQLiteDatabase db = _sqlHelper.getWritableDatabase();
 
             db.execSQL("INSERT INTO mytable (name,score)VALUES('" + InitialScore.getText().toString() + "','" + Integer.toString((int) scoreCalc()) + "')");
-            Log.d("check", InitialScore.getText().toString() + " " + Integer.toString((int) scoreCalc()));
+            Log.d("check", InitialScore.getText().toString().toUpperCase() + " " + Integer.toString((int) scoreCalc()));
             SubmitButton.setEnabled(false);
             InitialScore.setEnabled(false);
         }
