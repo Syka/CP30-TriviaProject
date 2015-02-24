@@ -44,25 +44,20 @@ public class ResultScreen extends ActionBarActivity {
         return (right / totalTime) * 1000;
     }
     public void PlayAgainOnClickListener(View v) {
-        this.startActivity(new Intent(this, StartMenu.class));
-    }
-
-    public void addScoreOnClickListener(View v)
-    {
         InitialScore = (EditText) findViewById(R.id.etScore);
-        SubmitButton = (Button) findViewById(R.id.btnAddScore);
         try
         {
-            SQLiteDatabase db = _sqlHelper.getWritableDatabase();
+                SQLiteDatabase db = _sqlHelper.getWritableDatabase();
 
-            db.execSQL("INSERT INTO mytable (name,score)VALUES('" + InitialScore.getText().toString() + "','" + Integer.toString((int) scoreCalc()) + "')");
-            Log.d("check", InitialScore.getText().toString().toUpperCase() + " " + Integer.toString((int) scoreCalc()));
-            SubmitButton.setEnabled(false);
-            InitialScore.setEnabled(false);
+                db.execSQL("INSERT INTO mytable (name,score)VALUES('" + InitialScore.getText().toString() + "','" + Integer.toString((int) scoreCalc()) + "')");
+                Log.d("check", InitialScore.getText().toString().toUpperCase() + " " + Integer.toString((int) scoreCalc()));
+                InitialScore.setEnabled(false);
+
         }
         catch (Exception e)
         {
             Log.d("Check", e.toString());
         }
+        this.startActivity(new Intent(this, StartMenu.class));
     }
 }

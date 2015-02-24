@@ -29,10 +29,6 @@ public class HighScoreScreen extends ActionBarActivity {
         //setSQLLite();
         getSQLLite();
 
-
-
-
-
     }
 
     public void getSQLLite()

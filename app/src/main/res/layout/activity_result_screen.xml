@@ -103,25 +103,14 @@
         android:textColor="#F0F7FF" />
 
     <EditText
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/etScore"
+        android:gravity="center_vertical|center_horizontal"
         android:layout_above="@+id/button10"
-        android:layout_toEndOf="@+id/textView"
-        android:gravity="center_vertical|center_horizontal"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit Score"
-        android:id="@+id/btnAddScore"
-        android:layout_above="@+id/button10"
-        android:layout_alignParentEnd="true"
-        android:onClick="addScoreOnClickListener"
-        android:layout_toEndOf="@+id/etScore"/>
+        android:layout_alignParentEnd="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -132,6 +121,7 @@
         android:layout_above="@+id/button10"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/etScore"
-        android:gravity="center_vertical|center_horizontal"/>
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_toStartOf="@+id/etScore"/>
 
 </RelativeLayout>
