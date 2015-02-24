@@ -92,12 +92,46 @@ public class TriviaDriver {
                 "Over-Thinker", "Fancy", "Captain", "The Gentlemen"));
 
         //VIDEO GAME TRIVIA
+        //Ratchet and Clank
         trivia.add(new Trivia("Video Games", "Ratchet & Clank",
                 "Over the course of the series, Captain Qwark eventually goes form Hero to what?",
                 "Zero", "Salesman", "Homeless", "Galactic Mayor"));
+        trivia.add(new Trivia("Video Games", "Ratchet & Clank",
+                "What villian was responsible for the destruction of the Lombax extinction?",
+                "Gleeman Vox", "Stuart Zurgo", "Dr. Nufarious", "Percival Tachyon"));
+
+        //Mario World
         trivia.add(new Trivia("Video Games", "Mario",
                 "What were the original Yoshi colours in Yoshi's Story?",
                 "Green, Yellow, Blue & Pink", "Just Red & Green", "Green, White, Blue & Red", "Green, Yellow, Blue & Red"));
+        trivia.add(new Trivia("Video Games", "Mario",
+                "Before Mario was Mario, what was his name?",
+                "Luigi", "Rockman", "Plungerman", "Jumpman"));
+
+        //Far Cry
+        trivia.add(new Trivia("Video Games", "Far Cry",
+                "In Far Cry 4, Which animal was not included?",
+                "Bear", "Honey Badger", "Eagle", "Falcon"));
+        trivia.add(new Trivia("Video Games", "Far Cry",
+                "In Far Cry 2, the player is under what sickness?",
+                "Cancer", "AIDS", "Headaches", "Miliaria"));
+
+        //Pokemon
+        trivia.add(new Trivia("Video Games", "Pokemon",
+                "To the end of Generation 6, how many Pokemon are there?",
+                "674", "742", "698", "719"));
+        trivia.add(new Trivia("Video Games", "Pokemon",
+                "How many evolutions does Eevee have?",
+                "6", "7", "9", "8"));
+
+        //Assassins Creed
+        trivia.add(new Trivia("Video Games", "Assassins Creed",
+                "What Assassin turned against there own brotherhood to save lives?",
+                "Altir", "Arno", "Edward", "Shay"));
+        trivia.add(new Trivia("Video Games", "Assassins Creed",
+                "What Assassin died locking himself inside a Library?",
+                "Aveline", "Ezio", "Connor", "Altir"));
+
     }
     public Trivia getTrivia(int index) {
         return trivia.get(index);
