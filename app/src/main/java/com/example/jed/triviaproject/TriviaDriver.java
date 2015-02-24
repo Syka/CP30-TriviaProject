@@ -58,14 +58,38 @@ public class TriviaDriver {
 
 
 
-
         //TV TRIVIA
+        //The Simpsons
         trivia.add(new Trivia("Television", "The Simpsons",
                 "Who shot Mr. Burns?",
                 "Bumblebee Man", "Hank Scorpio", "Apu", "Maggie"));
+        trivia.add(new Trivia("Television", "The Simpsons",
+                "NANANANANANANANANA...?",
+                "Batman", "Homer", "I forgot", "Leader"));
+
+        //Family Guy
         trivia.add(new Trivia("Television", "Family Guy",
                 "What car does God Himself drive?",
                 "A PT Cruiser", "The Popemobile", "A Camero", "An Escalade"));
+        trivia.add(new Trivia("Television", "Family Guy",
+                "On the 100th episode of Family Guy, what did Stewie accomplish?",
+                "Resurrection of Brian", "Become President", "Time Travel", "Killing Lois"));
+
+        //Futurama
+        trivia.add(new Trivia("Television", "Futurama",
+                "I am the man with NO name...?",
+                "Bender", "Phillip J. Fry", "Kip Kroker", "Zap Brannigan"));
+        trivia.add(new Trivia("Television", "Futurama",
+                "What makes a Man turn neutral, Power?",
+                "Endless Food", " Lust for Woman", "Neutrality", "Lust of Gold"));
+
+        //How I met your Mother
+        trivia.add(new Trivia("Television", "How I met your Mother",
+                "WHat name is most associated to the statement: Have you met ...?",
+                "Mother", "Marshal", "Barney", "Ted"));
+        trivia.add(new Trivia("Television", "How I met your Mother",
+                "What does the gang call out when their wearing Top Hats?",
+                "Over-Thinker", "Fancy", "Captain", "The Gentlemen"));
 
         //VIDEO GAME TRIVIA
         trivia.add(new Trivia("Video Games", "Ratchet & Clank",
