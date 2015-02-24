@@ -54,6 +54,23 @@ public class TriviaDriver {
                 "What is the name of McLean's partner in \"Die Hard 3?\"",
                 "Kratos", "Hades", "Athena", "Zeus"));
 
+        //Avatar
+        trivia.add(new Trivia("Movies", "Avatar",
+                "What is the name of the planet in Avatar?",
+                "Panarama", "Pandana", "Pluto", "Pandora"));
+        trivia.add(new Trivia("Movies", "Avatar",
+                "How tall do the natives in Avatar stand?",
+                "6 Feet", "7 Feet", "10 Feet", "9 Feet"));
+
+        //Pirates of the Caribbean
+        trivia.add(new Trivia("Movies", "Pirates of the Caribbean",
+                "How many pieces were there among the pirate lords?",
+                "11", "7", "8", "9"));
+        trivia.add(new Trivia("Movies", "Pirates of the Caribbean",
+                "How did Jack and the crew return to the original world?",
+                "Traveled though a cave", "They never returned", "Climb the waterfall", "Flipped the Ship"));
+
+
         //TV TRIVIA
         //The Simpsons
         trivia.add(new Trivia("Television", "The Simpsons",
@@ -70,6 +87,12 @@ public class TriviaDriver {
         trivia.add(new Trivia("Television", "Family Guy",
                 "On the 100th episode, what does Stewie finally accomplish?",
                 "Resurrect Brian", "Become President", "Time travel to the future", "Kill Lois"));
+        trivia.add(new Trivia("Television", "Family Guy",
+                "What teenage pop star was Stewie crazy about until she turned out to be a fembot?",
+                "Taylor Swift", "Selena Gomez", "Hilary Duff", "Miley Cyrus"));
+        trivia.add(new Trivia("Television", "Family Guy",
+                "What was the title of Brian's book?",
+                "Further then the Ocean Travels", "Eat, Pray, Sniff", "Love, a Brian Story", "Faster then the Speed of Love"));
 
         //Futurama
         trivia.add(new Trivia("Television", "Futurama",
@@ -95,6 +118,9 @@ public class TriviaDriver {
         trivia.add(new Trivia("Video Games", "Ratchet & Clank",
                 "What common household hardware are used as the series' currency?",
                 "Wingnuts", "Washers", "Screws", "Bolts"));
+        trivia.add(new Trivia("Video Games", "Ratchet & Clank",
+                "What villain was responsible for the extinction of the Lombax? ",
+                "Lord Vorselon", "Gleeman Vox", "Dr.Nefarious", "Percival Tachyon"));
 
         //Mario World
         trivia.add(new Trivia("Video Games", "Mario",
@@ -130,6 +156,16 @@ public class TriviaDriver {
         trivia.add(new Trivia("Video Games", "Assassin's Creed",
                 "Which of the following was not a featured setting in the series?",
                 "Jerusalem", "The Caribbean", "Italy", "Chicago"));
+
+        //Saints Row
+        trivia.add(new Trivia("Video Games", "Saints Row",
+                "In Saints Row 4, the Earth is destroyed by who?",
+                "Phillipe Loren", "Cyrus Temple", "Satan", "Zinyak"));
+        trivia.add(new Trivia("Video Games", "Assassin's Creed",
+                "What fictional character series is Matt Miller obsessed with?",
+                "SaintBlade", "DanteBlade", "NightHawk", "NightBlade"));
+
+
     }
     public ArrayList<Trivia> arr() {
         return trivia;
