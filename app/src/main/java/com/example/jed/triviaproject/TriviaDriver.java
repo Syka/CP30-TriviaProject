@@ -133,10 +133,7 @@ public class TriviaDriver {
                 "Aveline", "Ezio", "Connor", "Altir"));
 
     }
-    public Trivia getTrivia(int index) {
-        return trivia.get(index);
-    }
-    public int getSize() {
-        return trivia.size();
+    public ArrayList<Trivia> arr() {
+        return trivia;
     }
 }

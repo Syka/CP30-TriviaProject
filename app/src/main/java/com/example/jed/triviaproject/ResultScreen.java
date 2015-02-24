@@ -35,7 +35,7 @@ public class ResultScreen extends ActionBarActivity {
         ScoreView.setText(Double.toString(scoreCalc()));
     }
     public double scoreCalc() {
-        return right / totalTime * 1000;
+        return Math.floor(right / totalTime * 1000);
     }
     public void PlayAgainOnClickListener(View v) {
         this.startActivity(new Intent(this, StartMenu.class));

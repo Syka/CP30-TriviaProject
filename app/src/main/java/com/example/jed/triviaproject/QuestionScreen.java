@@ -41,9 +41,7 @@ public class QuestionScreen extends ActionBarActivity {
             @Override
             public void run() {
                 if (time <= 0) {
-                    //sends game stats to results screen via intent
-                    getQA().startActivity(resultIntent());
-                    finish();
+                    stopThread();
                 } else {
                     //continues timer while the game is running
                     time--;
@@ -64,11 +62,21 @@ public class QuestionScreen extends ActionBarActivity {
             }
         });
     }
+    protected void stopThread() {
+        timeThread.post(new Runnable() {
+            @Override
+            public void run() {
+                //sends game stats to results screen via intent
+                getQA().startActivity(resultIntent());
+                finish();
+            }
+        });
+    }
     protected Intent resultIntent() {
         Intent i = new Intent(getQA(), ResultScreen.class);
         i.putExtra("totalTime", totalTime);
         i.putExtra("right", right);
-        i.putExtra("size", td.getSize());
+        i.putExtra("size", td.arr().size());
         return i;
     }
     //creates variables of game screen's UI elements
@@ -88,7 +96,7 @@ public class QuestionScreen extends ActionBarActivity {
     protected void setTriv() {
         ArrayList<Integer> nums = new ArrayList<>();
         Random r = new Random();
-        triv = r.nextInt(td.getSize());
+        triv = r.nextInt(td.arr().size());
 
         //ensures the four answers are
         //never duplicated
@@ -101,27 +109,37 @@ public class QuestionScreen extends ActionBarActivity {
     //randomly chooses a trivia question
     //using the random answer order
     protected void getTriv(int t, ArrayList<?> nums) {
-        cat.setText(td.getTrivia(t).getProperty());
-        question.setText(td.getTrivia(t).getQuestion());
+        cat.setText(td.arr().get(t).getProperty());
+        question.setText(td.arr().get(t).getQuestion());
 
-        b1.setText(td.getTrivia(t).getAnswers(Integer.parseInt(nums.get(0).toString())));
-        b2.setText(td.getTrivia(t).getAnswers(Integer.parseInt(nums.get(1).toString())));
-        b3.setText(td.getTrivia(t).getAnswers(Integer.parseInt(nums.get(2).toString())));
-        b4.setText(td.getTrivia(t).getAnswers(Integer.parseInt(nums.get(3).toString())));
+        b1.setText(td.arr().get(t).getAnswers(Integer.parseInt(nums.get(0).toString())));
+        b2.setText(td.arr().get(t).getAnswers(Integer.parseInt(nums.get(1).toString())));
+        b3.setText(td.arr().get(t).getAnswers(Integer.parseInt(nums.get(2).toString())));
+        b4.setText(td.arr().get(t).getAnswers(Integer.parseInt(nums.get(3).toString())));
     }
     //adjusts time limit and score accordingly on button press
     public void TriviaOnClickListener(View v) {
         Button btn = (Button) v;
-        if (btn.getText().equals(td.getTrivia(triv).getCA_4())) {
+        if (td.arr().size() == 1) {
+            checkAnswer(btn);
+            setTimer(0);
+            stopThread();
+        } else {
+            checkAnswer(btn);
+            td.arr().remove(triv);
+        }
+        //chooses another question
+        setTriv();
+    }
+    public void checkAnswer(Button b) {
+        if (b.getText().equals(td.arr().get(triv).getCA_4())) {
             makeToast("Correct!");
             right++;
-            setTimer(time += 5);
+            setTimer(time += 3);
         } else {
             makeToast("Wrong!");
             setTimer(time -= 2);
         }
-        //chooses another question
-        setTriv();
     }
     public void makeToast(String str) {
         Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
