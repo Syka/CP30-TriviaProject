@@ -161,7 +161,7 @@ public class TriviaDriver {
         trivia.add(new Trivia("Video Games", "Saints Row",
                 "In Saints Row 4, the Earth is destroyed by who?",
                 "Phillipe Loren", "Cyrus Temple", "Satan", "Zinyak"));
-        trivia.add(new Trivia("Video Games", "Assassin's Creed",
+        trivia.add(new Trivia("Video Games", "Saints Row",
                 "What fictional character series is Matt Miller obsessed with?",
                 "SaintBlade", "DanteBlade", "NightHawk", "NightBlade"));
 
