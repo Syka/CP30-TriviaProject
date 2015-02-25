@@ -16,9 +16,8 @@ import android.widget.Toast;
 public class ResultScreen extends ActionBarActivity {
     TextView TotalView, RatioView, ScoreView;
     EditText InitialScore;
-    Button SubmitButton;
     double right, totalTime;
-    public MySQLiteOpenHelper _sqlHelper = new MySQLiteOpenHelper(this);
+    MySQLiteOpenHelper _sqlHelper = new MySQLiteOpenHelper(this);
 
     @Override
     public void onBackPressed() {}
@@ -26,38 +25,47 @@ public class ResultScreen extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_screen);
+
+        buildUI();
+        getScore();
+    }
+    protected void buildUI() {
         TotalView = (TextView) findViewById(R.id.txtTotalTime);
         RatioView = (TextView) findViewById(R.id.txtRatio);
         ScoreView = (TextView) findViewById(R.id.txtScore);
-        getScore();
-    }
-    protected void getScore() {
-        Intent i = getIntent();
-        totalTime = (double) i.getExtras().getInt("totalTime");
-        right = (double) i.getExtras().getInt("right");
-
-        TotalView.setText(String.format("%1$s s", i.getExtras().getInt("totalTime")));
-        RatioView.setText(String.format("%1$s/%2$s", i.getExtras().getInt("right"), i.getExtras().getInt("size")));
-        ScoreView.setText(Integer.toString((int) scoreCalc()));
     }
     protected double scoreCalc() {
         return (right *100);
     }
+    protected void getScore() {
+        totalTime = (double) getIntent().getExtras().getInt("totalTime");
+        right = (double) getIntent().getExtras().getInt("right");
+
+        TotalView.setText(String.format("%1$s s", getIntent().getExtras().getInt("totalTime")));
+        RatioView.setText(String.format("%1$s/%2$s", getIntent().getExtras().getInt("right"),
+                getIntent().getExtras().getInt("size")));
+        ScoreView.setText(Integer.toString((int) scoreCalc()));
+    }
     public void PlayAgainOnClickListener(View v) {
         InitialScore = (EditText) findViewById(R.id.etScore);
-        try
-        {
+
+        if (InitialScore.getText().equals("")) {
+            makeToast("Please enter your initials!");
+        }
+        else {
+            try {
                 SQLiteDatabase db = _sqlHelper.getWritableDatabase();
-
-                db.execSQL("INSERT INTO mytable (name,score)VALUES('" + InitialScore.getText().toString() + "','" + Integer.toString((int) scoreCalc()) + "')");
-                Log.d("check", InitialScore.getText().toString().toUpperCase() + " " + scoreCalc());
+                db.execSQL("INSERT INTO mytable (name,score)VALUES('"
+                        + InitialScore.getText().toString() + "','" + Integer.toString((int) scoreCalc()) + "')");
                 InitialScore.setEnabled(false);
-
+            } catch (Exception e) {
+                Log.d("Check", e.toString());
+            }
+            makeToast(InitialScore.getText() + " has been added!");
+            this.startActivity(new Intent(this, StartMenu.class));
         }
-        catch (Exception e)
-        {
-            Log.d("Check", e.toString());
-        }
-        this.startActivity(new Intent(this, StartMenu.class));
+    }
+    protected void makeToast(String str) {
+        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
 }

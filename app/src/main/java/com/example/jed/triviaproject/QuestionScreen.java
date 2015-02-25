@@ -15,14 +15,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class QuestionScreen extends ActionBarActivity {
-    public Handler timeThread;
-    public TriviaDriver td;
-    public Button b1, b2, b3, b4;
-    public TextView cat, question, txtTimer;
-    public int triv, right, time, totalTime, size,reward,penalty;
-    public boolean noQuestions;
-    public boolean Hardmode =false;
-    private static final int SHORT_DELAY = 500;
+    Handler timeThread;
+    TriviaDriver td;
+    Button b1, b2, b3, b4;
+    TextView cat, question, txtTimer;
+    int triv, right, time, totalTime, size, reward, penalty;
+    boolean noQuestions;
 
     @Override
     public void onBackPressed() {}
@@ -33,30 +31,21 @@ public class QuestionScreen extends ActionBarActivity {
         txtTimer = (TextView) findViewById(R.id.txtTimer);
 
         td = new TriviaDriver();
-        Intent i = getIntent();
-        Hardmode=i.getExtras().getBoolean("Hardmode");
         setVars();
         setScreen();
         setTimeThread();
     }
     protected void setVars() {
-        right = 0;
-        if(Hardmode == true)
-        {
-            penalty =10;
-            Log.d("check","Penalty 10");
+        if(getIntent().getExtras()
+                .getBoolean("Hardmode")) penalty = 10;
+        else penalty = 3;
 
-        }
-        else{
-            penalty = 3;
-            Log.d("check","Penalty 3");
-        }
-        totalTime = 0;
+        right = 0;
         time = 59;
+        totalTime = 0;
         size = td.arr().size();
         noQuestions = false;
         reward = 2;
-
     }
     //creates Handler that controls the timer
     //in its own thread
@@ -102,7 +91,6 @@ public class QuestionScreen extends ActionBarActivity {
         Intent i = new Intent(getQA(), ResultScreen.class);
         i.putExtra("totalTime", totalTime);
         i.putExtra("right", right);
-        Log.d("test", String.format("ArrayList size is: %1$s", td.arr().size()));
         i.putExtra("size", size);
         return i;
     }
@@ -122,13 +110,12 @@ public class QuestionScreen extends ActionBarActivity {
     //into an ArrayList
     protected void setTriv() {
         ArrayList<Integer> nums = new ArrayList<>();
-        Random r = new Random();
-        triv = r.nextInt(td.arr().size());
+        triv = new Random().nextInt(td.arr().size());
 
         //ensures the four answers are
         //never duplicated
         while (nums.size() < 4) {
-            int random = r.nextInt(4);
+            int random = new Random().nextInt(4);
             if (!nums.contains(random)) nums.add(random);
         }
         getTriv(triv, nums);
@@ -147,23 +134,22 @@ public class QuestionScreen extends ActionBarActivity {
     //adjusts time limit and score accordingly on button press
     public void TriviaOnClickListener(View v) {
         Button btn = (Button) v;
-        if (td.arr().size() == 1) {
-            checkAnswer(btn);
-            noQuestions = true;
-        } else {
-            checkAnswer(btn);
+        checkAnswer(btn);
+        if (td.arr().size() == 1) noQuestions = true;
+        else {
             td.arr().remove(triv);
+            //chooses another question
+            setTriv();
         }
-        //chooses another question
-        setTriv();
     }
-    public synchronized void checkAnswer(Button b) {
+    public void checkAnswer(Button b) {
         if (b.getText().equals(td.arr().get(triv).getCA())) {
             makeToast("Correct!");
             right++;
             setTimer(time += reward);
         } else {
-            makeToast(String.format("The correct answer was: %1$s", td.arr().get(triv).getCA()));
+            makeToast(String.format("The correct answer was: %1$s",
+                    td.arr().get(triv).getCA()));
             setTimer(time -= penalty);
         }
     }

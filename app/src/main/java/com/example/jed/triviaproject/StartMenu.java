@@ -40,41 +40,30 @@ public class StartMenu extends ActionBarActivity {
                 return true;
             }
         });
-
     }
-
-
     public void HighScoreButtonOnClickListener(View v) {
         Intent i = new Intent(this, HighScoreScreen.class);
         this.startActivity(i);
     }
-    public void shortclick()
-    {
-        try{
-
+    public void shortclick() {
+        try {
             Intent i = new Intent(this, QuestionScreen.class);
-            if(Hardmode == true)
-            {
-                i.putExtra("Hardmode", Hardmode=true);
-            }
-            else if(Hardmode == false)
-            {
-                i.putExtra("Hardmode", Hardmode=false);
-            }
-            Log.d("check","short click " + Hardmode);
-
+            if(Hardmode) i.putExtra("Hardmode", Hardmode=true);
+            else if(!Hardmode) i.putExtra("Hardmode", Hardmode=false);
             this.startActivity(i);
-        }
-        catch(Exception e)
-        {
-            Log.d("check",e.toString());
+        } catch(Exception e) {
+            Log.d("check", e.toString());
         }
     }
-    public void longclick()
-    {
-        Hardmode=true;
-        Toast.makeText(this,"HARDMODE ENABLED",Toast.LENGTH_SHORT).show();
-        Log.d("check","Long click " + Hardmode);
-
+    public void longclick() {
+        if (Hardmode) {
+            Hardmode = false;
+            Toast.makeText(this,"HARDMODE DISABLED",Toast.LENGTH_SHORT).show();
+            Log.d("check","Long click " + Hardmode);
+        } else {
+            Hardmode = true;
+            Toast.makeText(this,"HARDMODE ENABLED",Toast.LENGTH_SHORT).show();
+            Log.d("check","Long click " + Hardmode);
+        }
     }
 }

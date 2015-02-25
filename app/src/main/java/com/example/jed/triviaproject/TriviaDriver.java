@@ -19,7 +19,7 @@ public class TriviaDriver {
                 "What are the odds of successfully navigating an asteroid field?",
                 "1,547 to 1", "1,245,677 to 1", "10 to 1 ", "3,720 to 1"));
         trivia.add(new Trivia("Movies", "Star Wars",
-                "The volcanic world of Mustafar was George Lucas' rendition of what?",
+                "The volcanic world of Mustafar in \"Revenge of the Sith\" was George Lucas' rendition of what?",
                 "The sun", "His worst nightmare", "Florida", "Hell"));
 
         //Marvel
@@ -29,6 +29,9 @@ public class TriviaDriver {
         trivia.add(new Trivia("Movies", "Marvel",
                 "Of the Avengers, which movie star played as a different superhero?",
                 "Scarlett Johansson", "Robert Downey Jr.", "Tobey Maguire", "Chris Evans"));
+        trivia.add(new Trivia("Movies", "Marvel",
+                "Star-Lord's \"Awesome Mix Vol. 1\" is stored on what physical media?",
+                "Blu-ray Disc", "CD", "MP3", "Cassette"));
 
         //Back to the Future
         trivia.add(new Trivia("Movies", "Back to the Future",
@@ -40,11 +43,14 @@ public class TriviaDriver {
 
         //Lord of the Rings
         trivia.add(new Trivia("Movies", "Lord of the Rings",
+                "Besides The One Ring, how many Rings of Power actually exist in Middle-Earth?",
+                "20", "14", "18", "19"));
+        trivia.add(new Trivia("Movies", "Lord of the Rings",
                 "Gollum made a personal appearance during what awards show? ",
                 "Kids Choice Awards", "Emmy Awards", "The Oscars", "MTV Video Awards"));
         trivia.add(new Trivia("Movies", "Lord of the Rings",
                 "What is the most valuable item held within the Lonely Mountain?",
-                "Gollum", "The Ring", "Smaug", "Arkenstone"));
+                "Gollum", "The One Ring", "The Philosopher's Stone", "The Arkenstone"));
 
         //Die Hard
         trivia.add(new Trivia("Movies", "Die Hard",
@@ -56,20 +62,19 @@ public class TriviaDriver {
 
         //Avatar
         trivia.add(new Trivia("Movies", "Avatar",
-                "What is the name of the planet in Avatar?",
-                "Panarama", "Pandana", "Pluto", "Pandora"));
+                "What is the name of the planet in \"Avatar?\"",
+                "Puerto Rico", "Pandana", "Pluto", "Pandora"));
         trivia.add(new Trivia("Movies", "Avatar",
-                "How tall do the natives in Avatar stand?",
-                "6 Feet", "7 Feet", "10 Feet", "9 Feet"));
+                "In \"Avatar,\" how tall do the native Na'vi stand?",
+                "6 ft.", "7 ft.", "10 ft.", "9 ft."));
 
         //Pirates of the Caribbean
         trivia.add(new Trivia("Movies", "Pirates of the Caribbean",
-                "How many pieces were there among the pirate lords?",
-                "11", "7", "8", "9"));
+                "The Pirate Lords each held trinkets that was collectively referred to as what?",
+                "Pieces of Nine", "Seven Pieces of Eight", "Eleven Pieces of Nine", "Nine Pieces of Eight"));
         trivia.add(new Trivia("Movies", "Pirates of the Caribbean",
-                "How did Jack and the crew return to the original world?",
-                "Traveled though a cave", "They never returned", "Climb the waterfall", "Flipped the Ship"));
-
+                "How did Jack and the crew return to the original world in \"At World's End?\"",
+                "Traveled though a cave", "Tap their heels together three times", "Climb the waterfall", "Flip the ship"));
 
         //TV TRIVIA
         //The Simpsons
@@ -77,8 +82,14 @@ public class TriviaDriver {
                 "Who shot Mr. Burns?",
                 "Bumblebee Man", "Hank Scorpio", "Apu", "Maggie"));
         trivia.add(new Trivia("Television", "The Simpsons",
-                "Which Japanese laundry detergent's logo resembles Homer's likeness?",
+                "The logo that resembled Homer's likeless belonged to what Japanese laundry detergent?",
                 "Mr. Clean", "Mr. Dazzle", "Mr. Twinkle", "Mr. Sparkle"));
+        trivia.add(new Trivia("Television", "The Simpsons",
+                "Homer feared he had been fatally poisoned after eating what?",
+                "Free goo", "Pistol whip", "Beer nuts", "Blowfish"));
+        trivia.add(new Trivia("Television", "The Simpsons",
+                "Dan Castellaneta, the voice of Homer, voices how many characters in total?",
+                "1", "13", "42", "26"));
 
         //Family Guy
         trivia.add(new Trivia("Television", "Family Guy",
@@ -92,7 +103,7 @@ public class TriviaDriver {
                 "Taylor Swift", "Selena Gomez", "Hilary Duff", "Miley Cyrus"));
         trivia.add(new Trivia("Television", "Family Guy",
                 "What was the title of Brian's book?",
-                "Further then the Ocean Travels", "Eat, Pray, Sniff", "Love, a Brian Story", "Faster then the Speed of Love"));
+                "\"Faster Than The Speed Of Sound\"", "\"Dog Meets World\"", "\"Love: A Story About Brian\"", "\"Faster Than The Speed Of Love\""));
 
         //Futurama
         trivia.add(new Trivia("Television", "Futurama",
@@ -116,22 +127,22 @@ public class TriviaDriver {
                 "Over the course of the series, Captain Qwark eventually goes from Hero to what?",
                 "Zero", "Salesman", "Homeless", "Galactic Mayor"));
         trivia.add(new Trivia("Video Games", "Ratchet & Clank",
-                "What common household hardware are used as the series' currency?",
+                "What common household hardware is used as the series' currency?",
                 "Wingnuts", "Washers", "Screws", "Bolts"));
         trivia.add(new Trivia("Video Games", "Ratchet & Clank",
-                "What villain was responsible for the extinction of the Lombax? ",
-                "Lord Vorselon", "Gleeman Vox", "Dr.Nefarious", "Percival Tachyon"));
+                "Which villain was responsible for the Lombax exodus?",
+                "Lord Vorselon", "Gleeman Vox", "Dr. Nefarious", "Percival Tachyon"));
 
-        //Mario World
+        //Mario
         trivia.add(new Trivia("Video Games", "Mario",
-                "What were the original Yoshi colours in Yoshi's Story?",
-                "Green, Orange, Blue, Pink", "Just Red & Green", "Green, White, Blue, Red", "Green, Yellow, Blue, Red"));
+                "In \"Super Mario World,\" eating red Koopa shells gives Yoshi the ability to do what?",
+                "Grow twice its size", "Give Mario a 1-Up", "Become invincible", "Spit fireballs"));
         trivia.add(new Trivia("Video Games", "Mario",
                 "What was Mario's original name?",
                 "Luigi", "Rockman", "Shigeru", "Jumpman"));
         trivia.add(new Trivia("Video Games", "Mario",
-                "Complete the phrase, \"You know what they say: All toasters...\"",
-                "\"...toast bread!\"", "\"...toast bagels!\"", "\"...burn my toast!\"", "\"...toast toast!\""));
+                "In \"Super Mario 64,\" Princess Peach invites Mario to her castle to do what?",
+                "Fix her sink", "Find Yoshi", "Resuce her from Bowser", "Eat cake"));
 
         //Far Cry
         trivia.add(new Trivia("Video Games", "Far Cry",
@@ -147,7 +158,10 @@ public class TriviaDriver {
                 "674", "742", "698", "719"));
         trivia.add(new Trivia("Video Games", "Pokemon",
                 "How many possible evolutions does Eevee have?",
-                "Six", "Seven", "Nine", "Eight"));
+                "6", "7", "9", "8"));
+        trivia.add(new Trivia("Video Games", "Pokemon",
+                "Who is Professor Oak's grandson?",
+                "Gerry Oak", "Buttface", "Jerry Oak", "Gary Oak"));
 
         //Assassins Creed
         trivia.add(new Trivia("Video Games", "Assassin's Creed",
@@ -159,13 +173,11 @@ public class TriviaDriver {
 
         //Saints Row
         trivia.add(new Trivia("Video Games", "Saints Row",
-                "In Saints Row 4, the Earth is destroyed by who?",
+                "In \"Saints Row 4,\" the Earth is destroyed by who?",
                 "Phillipe Loren", "Cyrus Temple", "Satan", "Zinyak"));
         trivia.add(new Trivia("Video Games", "Saints Row",
-                "What fictional character series is Matt Miller obsessed with?",
+                "What fictional series is Matt Miller obsessed with?",
                 "SaintBlade", "DanteBlade", "NightHawk", "NightBlade"));
-
-
     }
     public ArrayList<Trivia> arr() {
         return trivia;
