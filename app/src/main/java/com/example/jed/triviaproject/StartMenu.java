@@ -3,12 +3,18 @@ package com.example.jed.triviaproject;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class StartMenu extends ActionBarActivity {
+    ImageButton startbutton;
+    boolean Hardmode = false;
+
     @Override
     public void onBackPressed() {
         System.exit(0);
@@ -17,13 +23,58 @@ public class StartMenu extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_menu);
+        startbutton = (ImageButton)findViewById(R.id.btnstart);
+        startbutton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                shortclick();
+            }
+        });
+
+        startbutton.setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View v)
+            {
+                longclick();
+                return true;
+            }
+        });
+
     }
-    public void StartButtonOnClickListener(View v) {
-        Intent i = new Intent(this, QuestionScreen.class);
-        this.startActivity(i);
-    }
+
+
     public void HighScoreButtonOnClickListener(View v) {
         Intent i = new Intent(this, HighScoreScreen.class);
         this.startActivity(i);
+    }
+    public void shortclick()
+    {
+        try{
+
+            Intent i = new Intent(this, QuestionScreen.class);
+            if(Hardmode == true)
+            {
+                i.putExtra("Hardmode", Hardmode=true);
+            }
+            else if(Hardmode == false)
+            {
+                i.putExtra("Hardmode", Hardmode=false);
+            }
+            Log.d("check","short click " + Hardmode);
+
+            this.startActivity(i);
+        }
+        catch(Exception e)
+        {
+            Log.d("check",e.toString());
+        }
+    }
+    public void longclick()
+    {
+        Hardmode=true;
+        Toast.makeText(this,"HARDMODE ENABLED",Toast.LENGTH_SHORT).show();
+        Log.d("check","Long click " + Hardmode);
+
     }
 }

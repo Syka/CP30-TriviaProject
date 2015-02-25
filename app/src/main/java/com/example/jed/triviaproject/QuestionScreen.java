@@ -19,8 +19,10 @@ public class QuestionScreen extends ActionBarActivity {
     public TriviaDriver td;
     public Button b1, b2, b3, b4;
     public TextView cat, question, txtTimer;
-    public int triv, right, time, totalTime, size;
+    public int triv, right, time, totalTime, size,reward,penalty;
     public boolean noQuestions;
+    public boolean Hardmode =false;
+    private static final int SHORT_DELAY = 500;
 
     @Override
     public void onBackPressed() {}
@@ -31,16 +33,30 @@ public class QuestionScreen extends ActionBarActivity {
         txtTimer = (TextView) findViewById(R.id.txtTimer);
 
         td = new TriviaDriver();
+        Intent i = getIntent();
+        Hardmode=i.getExtras().getBoolean("Hardmode");
         setVars();
         setScreen();
         setTimeThread();
     }
     protected void setVars() {
         right = 0;
-        time = 59;
+        if(Hardmode == true)
+        {
+            penalty =10;
+            Log.d("check","Penalty 10");
+
+        }
+        else{
+            penalty = 3;
+            Log.d("check","Penalty 3");
+        }
         totalTime = 0;
+        time = 59;
         size = td.arr().size();
         noQuestions = false;
+        reward = 2;
+
     }
     //creates Handler that controls the timer
     //in its own thread
@@ -145,10 +161,10 @@ public class QuestionScreen extends ActionBarActivity {
         if (b.getText().equals(td.arr().get(triv).getCA())) {
             makeToast("Correct!");
             right++;
-            setTimer(time += 3);
+            setTimer(time += reward);
         } else {
             makeToast(String.format("The correct answer was: %1$s", td.arr().get(triv).getCA()));
-            setTimer(time -= 2);
+            setTimer(time -= penalty);
         }
     }
     public void makeToast(String str) {
