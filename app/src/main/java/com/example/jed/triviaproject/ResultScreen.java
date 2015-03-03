@@ -17,6 +17,7 @@ public class ResultScreen extends ActionBarActivity {
     TextView TotalView, RatioView, ScoreView;
     EditText InitialScore;
     double right, totalTime;
+    int multiplier;
     MySQLiteOpenHelper _sqlHelper = new MySQLiteOpenHelper(this);
 
     @Override
@@ -27,6 +28,9 @@ public class ResultScreen extends ActionBarActivity {
         setContentView(R.layout.activity_result_screen);
 
         buildUI();
+        if(getIntent().getExtras()
+                .getBoolean("Hardmode")) multiplier = 300;
+        else multiplier = 100;
         getScore();
     }
     protected void buildUI() {
@@ -35,7 +39,7 @@ public class ResultScreen extends ActionBarActivity {
         ScoreView = (TextView) findViewById(R.id.txtScore);
     }
     protected double scoreCalc() {
-        return (right *100);
+        return (right *multiplier);
     }
     protected void getScore() {
         totalTime = (double) getIntent().getExtras().getInt("totalTime");

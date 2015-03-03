@@ -21,6 +21,7 @@ public class QuestionScreen extends ActionBarActivity {
     TextView cat, question, txtTimer;
     int triv, right, time, totalTime, size, reward, penalty;
     boolean noQuestions;
+    boolean hardmode;
 
     @Override
     public void onBackPressed() {}
@@ -38,6 +39,7 @@ public class QuestionScreen extends ActionBarActivity {
     protected void setVars() {
         if(getIntent().getExtras()
                 .getBoolean("Hardmode")) penalty = 10;
+
         else penalty = 3;
 
         right = 0;
@@ -92,6 +94,7 @@ public class QuestionScreen extends ActionBarActivity {
         i.putExtra("totalTime", totalTime);
         i.putExtra("right", right);
         i.putExtra("size", size);
+        if(getIntent().getExtras().getBoolean("Hardmode")) i.putExtra("Hardmode", hardmode=true);
         return i;
     }
     //creates variables of game screen's UI elements
